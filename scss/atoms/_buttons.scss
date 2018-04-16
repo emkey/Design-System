@@ -1,0 +1,106 @@
+/* Buttons */
+
+// I. Normal Buttons
+.button{
+	text-transform: uppercase;
+	display: inline-block;
+	border-radius: $border-radius;
+	@extend .padding-all-normal;
+	@extend .margin-all-normal;
+
+	// I.A: Variations
+	&:hover{
+		color: $white;
+		background-color: lighten($kblue, 15%);
+	}
+	&.deactivated{
+		color: darken($white, 30%);
+	}
+	&.deactivated:hover{
+		background-color: transparent;
+	}
+	&.negative{
+		color: $red;
+	}
+	&.negative:hover{
+		color: $white;
+		background-color: lighten($red, 15%);
+	}
+	&.positive{
+		color: $green;
+	}
+	&.positive:hover{
+		color: $white;
+		background-color: lighten($green, 15%);
+	}
+
+// II. Secondary Buttons
+	&.secondary{
+		border: 1px solid $kblue;
+
+		// II.A Variations
+		&:hover{
+			background-color: lighten($kblue, 15%);
+			border: 1px solid lighten($kblue, 15%);
+		}
+
+		&.deactivated{
+			color: darken($white, 30%);
+			border: 1px solid darken($white, 30%);
+		}
+
+		&.deactivated:hover{
+			color: darken($white, 30%);
+			border: 1px solid darken($white, 30%);
+			background-color: transparent;
+		}
+		&.negative{
+			color: $red;
+			border: 1px solid $red;
+		}
+		&.negative:hover{
+			color: $white;
+			background-color: lighten($red, 15%);
+			border: 1px solid lighten($red, 15%);
+		}
+		&.positive{
+			color: $green;
+			border-color: $green;
+		}
+		&.positive:hover{
+			color: $white;
+			border-color: lighten($green, 15%);
+			background-color: lighten($green, 15%);
+		}
+	}
+
+//III. Primary Buttons
+	&.primary{
+		color: $white;
+		background-color: $kblue;
+
+		&:hover{
+			background-color: lighten($kblue, 15%);
+		}
+
+		&.deactivated{
+			background-color: darken($white, 30%);
+		}
+
+		&.deactivated:hover{
+			background-color: darken($white, 30%);
+		}
+		&.negative{
+			background-color: $red;
+		}
+		&.negative:hover{
+			background-color: lighten($red, 15%);
+		}
+		&.positive{
+			background-color: $green;
+		}
+		&.positive:hover{
+			background-color: lighten($green, 15%);
+		}
+	}
+}

@@ -1,0 +1,55 @@
+
+
+// This is the body typeface
+body{
+	font-family: $main-typeface;
+	font-size: ms(0);
+	line-height: $base-lineheight
+}
+
+//These are the headers
+h1{
+	font-size: ms(4);
+	line-height: 1.2em;
+	font-weight: 600;
+}
+h2{
+	font-size: ms(3);
+	line-height: 1.2em;
+	font-weight: 600;
+}
+h3{
+	font-size: ms(2);
+	line-height: 1.3em;
+	font-weight: 600;
+}
+h4{
+	font-size: ms(1);
+	line-height: 1.3em;
+	font-weight: 600;
+}
+
+// paragraph elements
+p{
+	@extend .margin-top-normal;
+	@extend .margin-bottom-normal;
+}
+
+// This is the caption
+.caption{
+	font-size: ms(-2);
+}
+
+// Links
+a{
+	color: $kblue;
+	text-decoration: none;
+
+	&:hover{
+	color: lighten($kblue, 15%);
+	}
+	&:active{
+	color: $kblue;
+	}
+
+}

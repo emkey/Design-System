@@ -1,0 +1,97 @@
+html{
+	box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* This is a clearfix to make sure the layout stretches to the bottom */
+@mixin clearfix {
+  &:after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+}
+
+/* This is the basic grid wrapper */
+.layout-wrapper{
+	max-width: $layout-maxwidth;
+	margin-left: auto;
+	margin-right: auto;
+}
+.layout-row{
+	@include clearfix;
+}
+.sample-grid .column{
+	background-color: lighten($red, 15%);
+	text-align: center;
+}
+.column{
+	margin-right: $gutter-width;
+	margin-left: $gutter-width;
+	float: left;
+}
+.column-1{
+	width: calc(100% * 1/12 - (#{$gutter-width} * 2 ));
+}
+.column-2{
+	width: calc(100% * 2/12 - (#{$gutter-width} * 2 ));
+}
+.column-3{
+	width: calc(100% * 3/12 - (#{$gutter-width} * 2 ));
+}
+.column-4{
+	width: calc(100% * 4/12 - (#{$gutter-width} * 2 ));
+}
+.column-5{
+	width: calc(100% * 5/12 - (#{$gutter-width} * 2 ));
+}
+.column-6{
+	width: calc(100% * 6/12 - (#{$gutter-width} * 2 ));;
+}
+.column-7{
+	width: calc(100% * 7/12 - (#{$gutter-width} * 2 ));
+}
+.column-8{
+	width: calc(100% * 8/12 - (#{$gutter-width} * 2 ));
+}
+.column-9{
+	width: calc(100% * 9/12 - (#{$gutter-width} * 2 ));
+}
+.column-10{
+	width: calc(100% * 10/12 - (#{$gutter-width} * 2 ));
+}
+.column-11{
+	width: calc(100% * 11/12 - (#{$gutter-width} * 2 ));
+}
+.column-12{
+	width: calc(100% * 12/12 - (#{$gutter-width} * 2 ));
+}
+
+
+/* Example CSS */
+.sample-livegrid{
+	@extend .layout-wrapper;
+	.column{
+		background-color: lighten($red, 15%);
+	}
+}
+.left-sidebar{
+	@extend .column;
+	@extend .column-3;
+	@extend .padding-all-normal;
+}
+.middle-area{
+	@extend .column;
+	@extend .column-6;
+	@extend .padding-all-normal;
+}
+.right-sidebar{
+	@extend .column;
+	@extend .column-3;
+	@extend .padding-all-normal;
+}
+

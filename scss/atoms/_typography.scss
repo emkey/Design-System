@@ -4,35 +4,36 @@
 body{
 	font-family: $main-typeface;
 	font-size: ms(0);
+	font-weight: $font-weight;
 	line-height: $base-lineheight
 }
 
 //These are the headers
+h1,h2,h3,h4{
+	font-weight: 500;
+	@include margin-bottom($normal-spacing);
+}
 h1{
 	font-size: ms(4);
 	line-height: 1.2em;
-	font-weight: 600;
 }
 h2{
 	font-size: ms(3);
 	line-height: 1.2em;
-	font-weight: 600;
 }
 h3{
 	font-size: ms(2);
 	line-height: 1.3em;
-	font-weight: 600;
 }
 h4{
 	font-size: ms(1);
 	line-height: 1.3em;
-	font-weight: 600;
 }
 
 // paragraph elements
 p{
-	@extend .margin-top-normal;
-	@extend .margin-bottom-normal;
+	@include margin-top($medium-spacing);
+	@include margin-bottom($medium-spacing);
 }
 
 // This is the caption

@@ -1,0 +1,14 @@
+body{
+	background-color: darken($white, 5%);
+}
+.page-header{
+	background-color: $kblue;
+	color: $white;
+	@include padding-top($large-spacing);
+	@include padding-bottom($large-spacing);
+}
+
+.inverted-buttons{
+	background-color: darken($kblue, 15%);
+	@include margin-bottom($large-spacing);
+}

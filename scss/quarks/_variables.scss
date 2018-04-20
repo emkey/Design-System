@@ -1,6 +1,26 @@
-/* Variables */
-
-$border-radius: 4px;
-$layout-maxwidth: 1140px;
+/* Basic Variables */
+$root-fontsize: 100%;
+$border-radius: 0.25rem;
+$layout-maxwidth:80rem;
 $layout-columns: 12;
-$gutter-width: 8px;
+$gutter-width: 0.5rem;
+
+
+/* Typography */
+$main-typeface: 'Fira Sans';
+$sub-typeface: 'Helvetica';
+$base-fontsize: 0.875em;
+$base-lineheight: 1.5em;
+$font-weight: 400;
+
+/* Spacing */
+$normal-spacing: 0.5rem;
+$medium-spacing: 1rem;
+$large-spacing: 1.5rem;
+
+// Color Variables
+$kblue: #0076DE;
+$kdarkgrey: #1C1F21;
+$white: #fff;
+$red: #F44336;
+$green: #4CAF50;

@@ -115,9 +115,22 @@
 	 		<br />
 	 
 			<div class="sample-livegrid">
-				<div class="left-sidebar">This is an example of a container with the class being created by using @extend with one of the available grid column classes. This in particular is  3 column grid</div>
-				<div class="middle-area">This is an example of a container with the class being created by using @extend with one of the available grid column classes. This in particular is  6 column grid</div>
-				<div class="right-sidebar">This is an example of a container with the class being created by using @extend with one of the available grid column classes. This in particular is  3 column grid</div>
+				<div class="left-sidebar">This is an example of a container with the class being created by using @include with one of the available grid column mixins. This in particular is  3 column grid</div>
+				<div class="middle-area">This is an example of a container with the class being created by using @include with one of the available grid column classes. This in particular is  6 column grid</div>
+				<div class="right-sidebar">This is an example of a container with the class being created by using @include with one of the available grid column classes. This in particular is  3 column grid</div>
+			</div>
+		</div>
+		<br />
+		<div class="layout-wrapper">
+			<div class="layout-row sample-grid">
+				<div class="column-6 column">
+					 6 column parent cell
+					<div class="layout-wrapper nested-grid-sample">
+						<div class="layout-row sample-grid">
+							<div class="column-6 column">6 column nested cell</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</body>

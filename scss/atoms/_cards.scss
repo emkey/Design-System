@@ -1,0 +1,8 @@
+.card{
+	background-color: $white;
+	border-radius: $border-radius;
+	border: 1px solid darken($white, 10%);
+	@include padding-all($medium-spacing);
+	@include margin-top($medium-spacing);
+	@include margin-bottom($medium-spacing);
+}

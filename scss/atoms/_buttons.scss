@@ -5,13 +5,19 @@
 	text-transform: uppercase;
 	display: inline-block;
 	border-radius: $border-radius;
-	@extend .padding-all-normal;
-	@extend .margin-all-normal;
+	@include padding-top($normal-spacing);
+	@include padding-right($medium-spacing);
+	@include padding-bottom($normal-spacing);
+	@include padding-left($medium-spacing)
+	@include margin-all($normal-spacing);
 
 	// I.A: Variations
 	&:hover{
 		color: $white;
 		background-color: lighten($kblue, 15%);
+	}
+	&.inverted{
+		color: $white;
 	}
 	&.deactivated{
 		color: darken($white, 30%);
@@ -43,12 +49,16 @@
 			background-color: lighten($kblue, 15%);
 			border: 1px solid lighten($kblue, 15%);
 		}
-
+		&.inverted{
+			border-color: $white;
+		}
+		&.inverted:hover{
+			border-color: lighten($kblue, 15%);
+		}
 		&.deactivated{
 			color: darken($white, 30%);
 			border: 1px solid darken($white, 30%);
 		}
-
 		&.deactivated:hover{
 			color: darken($white, 30%);
 			border: 1px solid darken($white, 30%);
@@ -82,7 +92,14 @@
 		&:hover{
 			background-color: lighten($kblue, 15%);
 		}
-
+		&.inverted{
+			background-color: $white;
+			color: $kblue;
+		}
+		&.inverted:hover{
+			background-color: lighten($kblue, 15%);
+			color: $white;
+		}
 		&.deactivated{
 			background-color: darken($white, 30%);
 		}
@@ -103,4 +120,8 @@
 			background-color: lighten($green, 15%);
 		}
 	}
+}
+
+.inverted-buttons{
+	background-color: darken($kblue, 15%);
 }

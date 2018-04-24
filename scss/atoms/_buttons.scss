@@ -10,7 +10,7 @@
 	@include padding-bottom($normal-spacing);
 	@include padding-left($medium-spacing)
 	@include margin-all($normal-spacing);
-
+	
 	// I.A: Variations
 	&:hover{
 		color: $white;
@@ -122,6 +122,3 @@
 	}
 }
 
-.inverted-buttons{
-	background-color: darken($kblue, 15%);
-}

@@ -295,9 +295,6 @@ a {
     .button.primary.positive:hover {
       background-color: #80c883; }
 
-.inverted-buttons {
-  background-color: #004d92; }
-
 .card {
   background-color: #fff;
   border-radius: 0.25rem;
@@ -305,6 +302,22 @@ a {
   padding: 1rem;
   margin-top: 1rem;
   margin-bottom: 1rem; }
+
+input {
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 1px solid #1C1F21;
+  font-size: 0.875em;
+  font-weight: 400;
+  font-family: "Fira Sans";
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem; }
+  input::placeholder {
+    color: #626d74;
+    font-weight: 300; }
+  input:focus {
+    border-color: #2c9cff; }
 
 body {
   background-color: #f2f2f2; }
@@ -314,3 +327,7 @@ body {
   color: #fff;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem; }
+
+.inverted-buttons {
+  background-color: #004d92;
+  margin-bottom: 1.5rem; }

@@ -35,3 +35,6 @@
 @mixin margin-bottom($spacing){
 	margin-bottom: $spacing;
 }
+@mixin margin-left($spacing){
+	margin-left: $spacing;
+}

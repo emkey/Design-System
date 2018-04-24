@@ -1,0 +1,19 @@
+input{
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	border-bottom: 1px solid $kdarkgrey;
+	font-size: ms(0);
+	font-weight: $font-weight;
+	font-family: $main-typeface;
+	@include padding-top($normal-spacing);
+	@include padding-bottom($normal-spacing);
+	&::placeholder{
+		color: lighten($kdarkgrey, 30%);
+		font-weight: 300;
+	}
+	&:focus{
+		border-color: lighten($kblue, 15%);
+	}
+}
+

@@ -1,11 +1,12 @@
 input{
-	border-top: 0px;
-	border-left: 0px;
-	border-right: 0px;
-	border-bottom: 1px solid $kdarkgrey;
+	@include border-top(0px);
+	@include border-right(0px);
+	@include  border-bottom(1px solid $kdarkgrey);
+	@include border-left(0px);
 	font-size: ms(0);
 	font-weight: $font-weight;
 	font-family: $main-typeface;
+	line-height: $base-lineheight;
 	@include padding-top($normal-spacing);
 	@include padding-bottom($normal-spacing);
 	&::placeholder{
@@ -14,6 +15,31 @@ input{
 	}
 	&:focus{
 		border-color: lighten($kblue, 15%);
+		&::placeholder{
+			color: lighten($kblue, 15%);
+		}
+	}
+}
+textarea{
+	resize: none;
+	@include border-top(0px);
+	@include border-right(0px);
+	@include  border-bottom(1px solid $kdarkgrey);
+	@include border-left(0px);
+	font-family: $main-typeface;
+	font-weight: 300;
+	font-size: ms(0);
+	line-height: $base-lineheight;
+	color: lighten($kdarkgrey, 30%);
+	display: inline-block;
+	@include padding-top($normal-spacing);
+	@include padding-right($normal-spacing);
+	@include padding-bottom($normal-spacing);
+	@include padding-left($normal-spacing);
+	&:focus{
+	color: lighten($kblue, 15%);
+	background-color: darken($white, 15%);
+	@include border-bottom(1px solid $kblue);
 	}
 }
 

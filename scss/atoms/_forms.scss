@@ -38,8 +38,8 @@ textarea{
 	@include padding-left($normal-spacing);
 	&:focus{
 	background-color: darken($white, 15%);
-	border-top-right-radius: 4px;
-	border-top-left-radius: 4px;
+	border-top-right-radius: $border-radius;
+	border-top-left-radius: $border-radius;
 	@include border-bottom(1px solid $kblue);
 		&::placeholder{
 			color: lighten($kblue, 15%);

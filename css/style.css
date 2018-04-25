@@ -217,6 +217,7 @@ a {
   text-transform: uppercase;
   display: inline-block;
   border-radius: 0.25rem;
+  transition: background-color 0.30s ease-out;
   padding-top: 0.5rem;
   padding-right: 1rem;
   padding-bottom: 0.5rem;

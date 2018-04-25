@@ -339,9 +339,12 @@ textarea {
   padding-bottom: 0.5rem;
   padding-left: 0.5rem; }
   textarea:focus {
-    color: #2c9cff;
     background-color: #d9d9d9;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
     border-bottom: 1px solid #0076DE; }
+    textarea:focus::placeholder {
+      color: #2c9cff; }
 
 body {
   background-color: #f2f2f2; }

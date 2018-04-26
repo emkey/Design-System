@@ -46,4 +46,9 @@ textarea{
 		}
 	}
 }
-
+input.error, textarea.error{
+	border-color: $red;
+	&::placeholder{
+		color: $red;
+	}
+}

@@ -38,9 +38,11 @@ p{
 
 // This is the caption
 .caption{
-	font-size: ms(-2);
+	font-size: ms(-1);
 }
-
+label{
+	font-size: ms(-1);
+}
 // Links
 a{
 	color: $kblue;

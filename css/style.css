@@ -202,7 +202,10 @@ p {
   margin-bottom: 1rem; }
 
 .caption {
-  font-size: 0.38889em; }
+  font-size: 0.58333em; }
+
+label {
+  font-size: 0.58333em; }
 
 a {
   color: #0076DE;
@@ -346,6 +349,11 @@ textarea {
     border-bottom: 1px solid #2c9cff; }
     textarea:focus::placeholder {
       color: #2c9cff; }
+
+input.error, textarea.error {
+  border-color: #F44336; }
+  input.error::placeholder, textarea.error::placeholder {
+    color: #F44336; }
 
 body {
   background-color: #f2f2f2; }

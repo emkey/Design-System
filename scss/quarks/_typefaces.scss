@@ -2,5 +2,13 @@
 
 $modularscale: (
   base: 0.875em,
-  ratio: 1.5
+  ratio: 1.4,
+  280px:(
+  base: 0.875em,
+  ratio: 1.4,
+  	),
+  768px:(
+  	base: 0.875em,
+  	ratio: 1.5
+  ),
 );

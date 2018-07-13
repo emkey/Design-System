@@ -5,5 +5,7 @@
 	@include padding-all($medium-spacing);
 	@include margin-top($medium-spacing);
 	@include margin-bottom($medium-spacing);
-
+	@media (min-width: 481px){
+		@include padding-all($large-spacing);
+	}
 }

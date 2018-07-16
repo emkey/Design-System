@@ -1,5 +1,5 @@
 /* Buttons */
-
+$i: 2;
 // I. Normal Buttons
 .button{
 	text-transform: uppercase;
@@ -11,17 +11,17 @@
 	@include padding-bottom($normal-spacing);
 	@include padding-left($medium-spacing)
 	@include margin-all($normal-spacing);
-	
+	text-decoration: none;
 	// I.A: Variations
 	&:hover{
+		@extend .#{$fill-slug}-blue-#{$i};
 		color: $white;
-		background-color: lighten($kblue, 15%);
 	}
 	&.inverted{
 		color: $white;
 	}
 	&.deactivated{
-		color: darken($white, 30%);
+		color: darken($white, 20%);
 	}
 	&.deactivated:hover{
 		background-color: transparent;
@@ -30,95 +30,74 @@
 		color: $red;
 	}
 	&.negative:hover{
+		@extend .#{$fill-slug}-red-#{$i};
 		color: $white;
-		background-color: lighten($red, 15%);
-	}
-	&.positive{
-		color: $green;
-	}
-	&.positive:hover{
-		color: $white;
-		background-color: lighten($green, 15%);
 	}
 
 // II. Secondary Buttons
 	&.secondary{
-		border: 1px solid $kblue;
+		@include border-all(1px,1px,1px,1px,solid);
+		@extend .border-blue;
 
 		// II.A Variations
 		&:hover{
-			background-color: lighten($kblue, 15%);
-			border: 1px solid lighten($kblue, 15%);
+			@extend .#{$fill-slug}-blue-#{$i};
+			@extend .#{$border-slug}-blue-#{$i};
 		}
 		&.inverted{
 			border-color: $white;
 		}
 		&.inverted:hover{
-			border-color: lighten($kblue, 15%);
+			@extend .#{$fill-slug}-blue-#{$i};
+			@extend .#{$border-slug}-blue-#{$i};
 		}
 		&.deactivated{
-			color: darken($white, 30%);
-			border: 1px solid darken($white, 30%);
+			@extend .#{$textcolor-slug}-white-#{$i};
+			@extend .#{$border-slug}-white-#{$i};
 		}
 		&.deactivated:hover{
-			color: darken($white, 30%);
-			border: 1px solid darken($white, 30%);
+			@extend .#{$textcolor-slug}-white-#{$i};
+			@extend .#{$border-slug}-white-#{$i};
 			background-color: transparent;
 		}
 		&.negative{
 			color: $red;
-			border: 1px solid $red;
+			@extend .border-red;
 		}
 		&.negative:hover{
 			color: $white;
-			background-color: lighten($red, 15%);
-			border: 1px solid lighten($red, 15%);
-		}
-		&.positive{
-			color: $green;
-			border-color: $green;
-		}
-		&.positive:hover{
-			color: $white;
-			border-color: lighten($green, 15%);
-			background-color: lighten($green, 15%);
+			@extend .#{$fill-slug}-red-#{$i};
+			@extend .#{$border-slug}-red-#{$i};
 		}
 	}
 
 //III. Primary Buttons
 	&.primary{
+		@extend .fill-blue;
 		color: $white;
-		background-color: $kblue;
-
 		&:hover{
-			background-color: lighten($kblue, 15%);
+			@extend .#{$fill-slug}-blue-#{$i};
 		}
 		&.inverted{
-			background-color: $white;
+			@extend .fill-white;
 			color: $kblue;
 		}
 		&.inverted:hover{
-			background-color: lighten($kblue, 15%);
+			@extend .#{$fill-slug}-blue-#{$i};
 			color: $white;
 		}
 		&.deactivated{
-			background-color: darken($white, 30%);
+			@extend .#{$fill-slug}-white-#{$i};
 		}
 
 		&.deactivated:hover{
-			background-color: darken($white, 30%);
+			@extend .#{$fill-slug}-white-#{$i};
 		}
 		&.negative{
-			background-color: $red;
+			@extend .fill-red;
 		}
 		&.negative:hover{
-			background-color: lighten($red, 15%);
-		}
-		&.positive{
-			background-color: $green;
-		}
-		&.positive:hover{
-			background-color: lighten($green, 15%);
+			@extend .#{$fill-slug}-red-#{$i};
 		}
 	}
 }

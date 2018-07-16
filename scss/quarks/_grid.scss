@@ -21,148 +21,64 @@ html{
 	max-width: $layout-maxwidth;
 	margin-left: auto;
 	margin-right: auto;
+
 }
+/* Sets up a layout row */
 .layout-row{
 	@include clearfix;
 }
-.sample-grid .column{
-	background-color: lighten($red, 15%);
-	text-align: center;
-}
-
+/* Sets up the left and right margins */
 @mixin column(){
-	margin-right: $gutter-width;
-	margin-left: $gutter-width;
 	float: left;
+	@include respond-to(small){
+		margin-right: $small-gutter-width;
+		margin-left: $small-gutter-width;
+	}
+	@include respond-to(medium){
+		margin-right: $medium-gutter-width;
+		margin-left: $medium-gutter-width;
+	}
+	@include respond-to(large){
+		margin-right: $large-gutter-width;
+		margin-left: $large-gutter-width;
+	}
 }
-
 .column{
 	@include column();
 }
-@mixin column-1(){
-	width: calc(100% * 1/12 - (#{$gutter-width} * 2 ));
-}
-@mixin column-2{
-	width: calc(100% * 2/12 - (#{$gutter-width} * 2 ));
-}
-@mixin column-3{
-	width: calc(100% * 3/12 - (#{$gutter-width} * 2 ));
-}
-@mixin column-4(){
-	width: calc(100% * 4/12 - (#{$gutter-width} * 2 ));
-}
-@mixin column-5(){
-	width: calc(100% * 5/12 - (#{$gutter-width} * 2 ));
-}
-@mixin column-6(){
-	width: calc(100% * 6/12 - (#{$gutter-width} * 2 ));;
-}
-@mixin column-7(){
-	width: calc(100% * 7/12 - (#{$gutter-width} * 2 ));
-}
-@mixin column-8(){
-	width: calc(100% * 8/12 - (#{$gutter-width} * 2 ));
-}
-@mixin column-9(){
-	width: calc(100% * 9/12 - (#{$gutter-width} * 2 ));
-}
-@mixin column-10(){
-	width: calc(100% * 10/12 - (#{$gutter-width} * 2 ));
-}
-@mixin column-11(){
-	width: calc(100% * 11/12 - (#{$gutter-width} * 2 ));
-}
-@mixin column-12(){
-	width: calc(100% * 12/12 - (#{$gutter-width} * 2 ));
-}
-.column-1{
-	@include column-1();
-}
-.column-2{
-	@include column-2();
-}
-.column-3{
-	@include column-3();
-}
-.column-4{
-	@include column-4();
-}
-.column-5{
-	@include column-5();
-}
-.column-6{
-	@include column-6();
-}
-.column-7{
-	@include column-7();
-}
-.column-8{
-	@include column-8();
-}
-.column-9{
-	@include column-9();
-}
-.column-10{
-	@include column-10();
-}
-.column-11{
-	@include column-11();
-}
-.column-12{
-	@include column-12();
-}
-
-
-/* Example CSS */
-.sample-livegrid{
-	@extend .layout-wrapper;
-	@include clearfix;
-	.column{
-		
-	}
-}
-.left-sidebar{
-	@include column();
-	@include column-12();
-	@include padding-all($normal-spacing);
-	background-color: lighten($red, 15%);
-	@media (min-width: 481px) {
-		@include column-4();
-	}
-	@media (min-width: 769px){
+/* Creates a mixin for columns */
+@mixin column-width($column-number){
+	@include respond-to(small){
+		width: calc(100% * #{$column-number}/#{$layout-columns} - (#{$small-gutter-width} * 2));
 		@include column();
-		@include column-3();
-		@include padding-all($large-spacing);
 	}
-	
-}
-.middle-area{
-	@include column();
-	@include column-12();
-	@include padding-all($normal-spacing);
-	background-color: lighten($red, 15%);
-	@media (min-width: 481px){
-		@include column-4();
-		@include padding-all($normal-spacing);
+	@include respond-to(medium){
+		width: calc(100% * #{$column-number}/#{$layout-columns} - (#{$medium-gutter-width} * 2));
+		@include column();
 	}
-	@media (min-width: 769px){
-		@include column-6();
+	@include respond-to(large){
+		width: calc(100% * #{$column-number}/#{$layout-columns} - (#{$large-gutter-width} * 2));
+		@include column();
 	}
 }
-.right-sidebar{
-	@include column();
-	@include column-12();
-	@include padding-all($normal-spacing);
-	background-color: lighten($red, 15%);
-	@media (min-width: 481px){
-		@include column-4();
+/* Creates all the css column classes */
+$column-slug: column;
+@for $i from 1 through $layout-columns{
+	@include respond-to(small){
+		.#{$column-slug}-#{$i}{
+			width: calc(100% * #{$i}/#{$layout-columns} - (#{$small-gutter-width} * 2 ));
+		}
 	}
-	@media (min-width: 769px){
-		@include column-3();
+	@include respond-to(medium){
+		.#{$column-slug}-#{$i}{
+			width: calc(100% * #{$i}/#{$layout-columns} - (#{$medium-gutter-width} * 2 ));
+		}
+	}
+	@include respond-to(large){
+		.#{$column-slug}-#{$i}{
+			width: calc(100% * #{$i}/#{$layout-columns} - (#{$large-gutter-width} * 2 ));
+		}
 	}
 }
-.nested-grid-sample {
-	.column{
-		background-color: rgba(246,104,94,50);
-	}
-}
+
+

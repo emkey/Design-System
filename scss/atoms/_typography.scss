@@ -1,13 +1,10 @@
-
-
 // This is the body typeface
 body{
-	font-family: $main-typeface;
-	font-size: ms(0);
-	font-weight: $font-weight;
-	line-height: $base-lineheight
+  font-family: $main-typeface;
+  font-size: ms(0);
+  font-weight: $font-weight;
+  line-height: $base-lineheight
 }
-
 //These are the headers
 h1,h2,h3,h4{
 	font-weight: 500;
@@ -29,7 +26,6 @@ h4{
 	@include ms-respond(font-size,1);
 	line-height: 1.3em;
 }
-
 // paragraph elements
 p{
 	@include margin-top($medium-spacing);
@@ -47,12 +43,25 @@ label{
 a{
 	color: $kblue;
 	text-decoration: none;
-
 	&:hover{
-	color: lighten($kblue, 15%);
+	color: textcolortint($kblue, 2);
 	}
 	&:active{
-	color: $kblue;
+	color: textcolortint($kblue, 0);
 	}
-
+	&:visited{
+	color: textcolortint($kblue, 0);
+	}
+	&:link{
+	color: textcolortint($kblue, 0);
+	}
+}
+.textalign-left{
+	text-align: left;
+}
+.textalign-right{
+	text-align: right;
+}
+.textalign-center{
+	text-align: center;
 }

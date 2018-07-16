@@ -30,6 +30,7 @@ html{
 /* Sets up the left and right margins */
 @mixin column(){
 	float: left;
+	box-sizing: border-box;
 	@include respond-to(small){
 		margin-right: $small-gutter-width;
 		margin-left: $small-gutter-width;

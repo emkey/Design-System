@@ -40,28 +40,27 @@ label{
 	font-size: ms(-1);
 }
 // Links
-a{
-	color: $kblue;
-	text-decoration: none;
-	&:hover{
-	color: textcolortint($kblue, 2);
+	// Text Links
+	a{
+		color: $kblue;
+		text-decoration: none;
+		&:hover{
+		color: textcolortint($kblue, 2);
+		}
+		&:active{
+		color: textcolortint($kblue, 0);
+		}
+		&:visited{
+		color: textcolortint($kblue, 0);
+		}
+		&:link{
+		color: textcolortint($kblue, 0);
+		}
 	}
-	&:active{
-	color: textcolortint($kblue, 0);
+	// Button Links
+	.button-text{
+		text-transform: uppercase;
+		letter-spacing: 0.0625em;
+		display: inline-block;
+		text-decoration: none;
 	}
-	&:visited{
-	color: textcolortint($kblue, 0);
-	}
-	&:link{
-	color: textcolortint($kblue, 0);
-	}
-}
-.textalign-left{
-	text-align: left;
-}
-.textalign-right{
-	text-align: right;
-}
-.textalign-center{
-	text-align: center;
-}

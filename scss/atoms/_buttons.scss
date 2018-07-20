@@ -2,16 +2,14 @@
 $i: 2;
 // I. Normal Buttons
 .button{
-	text-transform: uppercase;
-	display: inline-block;
-	border-radius: $border-radius;
-	transition: background-color 0.30s ease-out;
+	@extend .button-text;
 	@include padding-top($normal-spacing);
 	@include padding-right($medium-spacing);
 	@include padding-bottom($normal-spacing);
 	@include padding-left($medium-spacing)
 	@include margin-all($normal-spacing);
-	text-decoration: none;
+	border-radius: $border-radius;
+	transition: background-color 0.30s ease-out;
 	// I.A: Variations
 	&:hover{
 		@extend .#{$fill-slug}-blue-#{$i};

@@ -12,3 +12,15 @@ $modularscale: (
   ),
 );
 
+@mixin text-align($alignment){
+  text-align: $alignment; 
+}
+.text-left{
+  @include text-align(left);
+}
+.text-center{
+  @include text-align(center);
+}
+.text-right{
+  @include text-align(right);
+}

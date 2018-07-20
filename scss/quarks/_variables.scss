@@ -3,9 +3,10 @@ $root-fontsize: 100%;
 $border-radius: 0.25rem;
 $layout-maxwidth:80rem;
 $layout-columns: 12;
-$small-gutter-width: 0.25rem;
-$medium-gutter-width: 0.5rem;
-$large-gutter-width: 1rem;
+	/* Layout Gutters */
+	$small-gutter-width: 0.25rem;
+	$medium-gutter-width: 0.5rem;
+	$large-gutter-width: 1rem;
 
 /* Typography */
 $main-typeface: 'Fira Sans';
@@ -33,22 +34,3 @@ $breakpoints: (
   'medium' : 640px,
   'large'  : 1025px
 );
-
-@mixin respond-to($breakpoint) {
-  // Retrieves the value from the key
-  $value: map-get($breakpoints, $breakpoint);
-
-  // If the key exists in the map
-  @if $value != null {
-    // Prints a media query based on the value
-    @media (min-width: $value) {
-      @content;
-    }
-  }
-
-  // If the key doesn't exist in the map
-  @else {
-    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
-        + "Please make sure it is defined in `$breakpoints` map.";
-  }
-}

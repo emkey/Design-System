@@ -46,8 +46,18 @@ table {
   border-spacing: 0; }
 
 /* Basic Variables */
+/* Layout Gutters */
 /* Typography */
 /* Spacing */
+.text-left {
+  text-align: left; }
+
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
+
 /*
 I. Backgrounds
 	A. Primary Colors
@@ -73,7 +83,7 @@ II. Borders
 .fill-black {
   background-color: #1C1F21; }
 
-.fill-white, .button.primary.inverted {
+.fill-white, .button.primary.inverted, .card {
   background-color: #fff; }
 
 /* B. Secondary Colors */
@@ -317,6 +327,7 @@ II. Borders
   border-width: 1px 1px 1px 1px;
   border-style: solid; }
 
+/* This is the Breakpoints Mixins */
 html {
   box-sizing: border-box; }
 
@@ -573,27 +584,21 @@ a {
   a:link {
     color: textcolortint(#0076DE, 0); }
 
-.textalign-left {
-  text-align: left; }
-
-.textalign-right {
-  text-align: right; }
-
-.textalign-center {
-  text-align: center; }
+.button-text, .button {
+  text-transform: uppercase;
+  letter-spacing: 0.0625em;
+  display: inline-block;
+  text-decoration: none; }
 
 /* Buttons */
 .button {
-  text-transform: uppercase;
-  display: inline-block;
-  border-radius: 0.25rem;
-  transition: background-color 0.30s ease-out;
   padding-top: 0.5rem;
   padding-right: 1rem;
   padding-bottom: 0.5rem;
   padding-left: 1rem;
   margin: 0.5rem;
-  text-decoration: none; }
+  border-radius: 0.25rem;
+  transition: background-color 0.30s ease-out; }
   .button:hover {
     color: #fff; }
   .button.inverted {
@@ -625,16 +630,24 @@ a {
       color: #fff; }
 
 .card {
-  background-color: #fff;
   border-radius: 0.25rem;
   border: 1px solid #e6e6e6;
-  padding: 1rem; }
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem; }
   @media (min-width: 640px) {
     .card {
-      padding: 1rem; } }
+      padding: 1rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem; } }
   @media (min-width: 1025px) {
     .card {
-      padding: 1.5rem; } }
+      padding: 1.5rem;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem; } }
+
+html > layout-wrapper > layout-row.card {
+  border: 0px; }
 
 input {
   border-bottom: 1px solid;

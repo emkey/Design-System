@@ -90,18 +90,18 @@ II. Borders
 .fill-red, .button.primary.negative {
   background-color: #F44336; }
 
-.fill-green {
+.fill-green, .button.primary.success {
   background-color: #4CAF50; }
 
-.fill-amber {
+.fill-amber, .button.primary.warning {
   background-color: #FFC107; }
 
 /* C. Tints */
 /* 1. Blues */
-.fill-blue-1 {
+.fill-blue-1, .button:hover, .button.inverted:hover, .button.secondary:hover, .button.secondary.inverted:hover, .button.primary:hover, .button.primary.inverted:hover {
   background-color: #3391e5; }
 
-.fill-blue-2, .button:hover, .button.secondary:hover, .button.secondary.inverted:hover, .button.primary:hover, .button.primary.inverted:hover {
+.fill-blue-2 {
   background-color: #66adeb; }
 
 .fill-blue-3 {
@@ -118,27 +118,27 @@ II. Borders
   background-color: #a4a5a6; }
 
 /* 3. Whites */
-.fill-white-1 {
+.fill-white-1, .button.primary.deactivated, .button.primary.deactivated:hover {
   background-color: #e6e6e6; }
 
-.fill-white-2, .button.primary.deactivated, .button.primary.deactivated:hover {
+.fill-white-2 {
   background-color: #cccccc; }
 
 .fill-white-3 {
   background-color: #b3b3b3; }
 
 /* 4. Red */
-.fill-red-1 {
+.fill-red-1, .button.negative:hover, .button.secondary.negative:hover, .button.primary.negative:hover {
   background-color: #f6695e; }
 
-.fill-red-2, .button.negative:hover, .button.secondary.negative:hover, .button.primary.negative:hover {
+.fill-red-2 {
   background-color: #f88e86; }
 
 .fill-red-3 {
   background-color: #fbb4af; }
 
 /* 5. Amber */
-.fill-amber-1 {
+.fill-amber-1, .button.warning:hover, .button.primary.warning:hover {
   background-color: #ffcd39; }
 
 .fill-amber-2 {
@@ -148,7 +148,7 @@ II. Borders
   background-color: #ffe69c; }
 
 /* 6. Green */
-.fill-green-1 {
+.fill-green-1, .button.success:hover, .button.secondary.success:hover, .button.primary.success:hover {
   background-color: #70bf73; }
 
 .fill-green-2 {
@@ -177,7 +177,7 @@ II. Borders
   border-color: #FFC107; }
 
 /* 2. Red */
-.border-red, .button.secondary.negative {
+.border-red {
   border-color: #F44336; }
 
 /* 3. Green */
@@ -186,10 +186,10 @@ II. Borders
 
 /* Tints */
 /* Blue */
-.border-blue-1 {
+.border-blue-1, .button.secondary:hover, .button.secondary.inverted:hover {
   border-color: #3391e5; }
 
-.border-blue-2, .button.secondary:hover, .button.secondary.inverted:hover {
+.border-blue-2 {
   border-color: #66adeb; }
 
 .border-blue-3 {
@@ -206,17 +206,17 @@ II. Borders
   border-color: #a4a5a6; }
 
 /* White */
-.border-white-1 {
+.border-white-1, .button.secondary.deactivated, .button.secondary.deactivated:hover {
   border-color: #e6e6e6; }
 
-.border-white-2, .button.secondary.deactivated, .button.secondary.deactivated:hover {
+.border-white-2 {
   border-color: #cccccc; }
 
 .border-white-3 {
   border-color: #b3b3b3; }
 
 /* Amber */
-.border-amber-1 {
+.border-amber-1, .button.secondary.warning, .button.secondary.warning:hover, .button.primary.warning:hover {
   border-color: #ffcd39; }
 
 .border-amber-2 {
@@ -226,17 +226,17 @@ II. Borders
   border-color: #ffe69c; }
 
 /* Red */
-.border-red-1 {
+.border-red-1, .button.secondary.negative {
   border-color: #f6695e; }
 
-.border-red-2, .button.secondary.negative:hover {
+.border-red-2 {
   border-color: #f88e86; }
 
 .border-red-3 {
   border-color: #fbb4af; }
 
 /* Green */
-.border-green-1 {
+.border-green-1, .button.secondary.success, .button.secondary.success:hover, .button.primary.success:hover {
   border-color: #70bf73; }
 
 .border-green-2 {
@@ -253,17 +253,17 @@ II. Borders
 .textcolor-black {
   color: #1C1F21; }
 
-.textcolor-white {
+.textcolor-white, .button.inverted, .button.inverted:hover, .button.negative:hover, .button.success:hover, .button.warning:hover, .button.secondary.negative:hover, .button.secondary.success:hover, .button.secondary.warning:hover, .button.primary, .button.primary.inverted:hover, .button.primary.deactivated, .button.primary.deactivated:hover, .button.primary.negative, .button.primary.success, .button.primary.success:hover, .button.primary.warning, .button.primary.warning:hover {
   color: #fff; }
 
 /* B. Secondary Color */
-.textcolor-amber {
+.textcolor-amber, .button.warning, .button.secondary.warning {
   color: #FFC107; }
 
 .textcolor-red {
   color: #F44336; }
 
-.textcolor-green {
+.textcolor-green, .button.secondary.success {
   color: #4CAF50; }
 
 /* C. Tints */
@@ -285,10 +285,10 @@ II. Borders
 .textcolor-black-3 {
   color: #a4a5a6; }
 
-.textcolor-white-1 {
+.textcolor-white-1, .button.deactivated, .button.deactivated:hover, .button.secondary.deactivated, .button.secondary.deactivated:hover {
   color: #e6e6e6; }
 
-.textcolor-white-2, .button.secondary.deactivated, .button.secondary.deactivated:hover {
+.textcolor-white-2 {
   color: #cccccc; }
 
 .textcolor-white-3 {
@@ -303,7 +303,7 @@ II. Borders
 .textcolor-amber-3 {
   color: #ffe69c; }
 
-.textcolor-red-1 {
+.textcolor-red-1, .button.secondary.negative {
   color: #f6695e; }
 
 .textcolor-red-2 {
@@ -588,9 +588,23 @@ a {
   text-transform: uppercase;
   letter-spacing: 0.0625em;
   display: inline-block;
-  text-decoration: none; }
+  text-decoration: none;
+  text-align: center; }
 
 /* Buttons */
+/* Table of Contents */
+/** 
+I. Normal Buttons
+	A. Variations
+		1. Basic Hover State
+		2. Inverted Buttons
+		3. Deactivated Buttons
+		4. Negative Buttons
+		5. Warning Buttons
+
+II. Secondary Buttons
+
+**/
 .button {
   padding-top: 0.5rem;
   padding-right: 1rem;
@@ -601,16 +615,12 @@ a {
   transition: background-color 0.30s ease-out; }
   .button:hover {
     color: #fff; }
-  .button.inverted {
-    color: #fff; }
-  .button.deactivated {
-    color: #cccccc; }
   .button.deactivated:hover {
     background-color: transparent; }
   .button.negative {
     color: #F44336; }
-  .button.negative:hover {
-    color: #fff; }
+  .button.success {
+    color: #4CAF50; }
   .button.secondary {
     border-width: 1px 1px 1px 1px;
     border-style: solid; }
@@ -618,16 +628,11 @@ a {
       border-color: #fff; }
     .button.secondary.deactivated:hover {
       background-color: transparent; }
-    .button.secondary.negative {
-      color: #F44336; }
-    .button.secondary.negative:hover {
-      color: #fff; }
-  .button.primary {
-    color: #fff; }
-    .button.primary.inverted {
-      color: #0076DE; }
-    .button.primary.inverted:hover {
-      color: #fff; }
+  .button.primary.inverted {
+    color: #0076DE; }
+
+.fullwidth-button {
+  display: block; }
 
 .card {
   border-radius: 0.25rem;

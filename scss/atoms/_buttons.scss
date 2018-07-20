@@ -1,6 +1,21 @@
 /* Buttons */
-$i: 2;
+/* Table of Contents */
+/** 
+I. Normal Buttons
+	A. Variations
+		1. Basic Hover State
+		2. Inverted Buttons
+		3. Deactivated Buttons
+		4. Negative Buttons
+		5. Warning Buttons
+
+II. Secondary Buttons
+
+**/
+
+$i:1;
 // I. Normal Buttons
+
 .button{
 	@extend .button-text;
 	@include padding-top($normal-spacing);
@@ -10,93 +25,191 @@ $i: 2;
 	@include margin-all($normal-spacing);
 	border-radius: $border-radius;
 	transition: background-color 0.30s ease-out;
-	// I.A: Variations
-	&:hover{
-		@extend .#{$fill-slug}-blue-#{$i};
-		color: $white;
-	}
-	&.inverted{
-		color: $white;
-	}
-	&.deactivated{
-		color: darken($white, 20%);
-	}
-	&.deactivated:hover{
-		background-color: transparent;
-	}
-	&.negative{
-		color: $red;
-	}
-	&.negative:hover{
-		@extend .#{$fill-slug}-red-#{$i};
-		color: $white;
-	}
+	// A. Variations
+		// 1. Basic Hover State
+		&:hover{
+			@extend .#{$fill-slug}-blue-#{$i};
+			color: $white;
+		}
+
+		// 2. Inverted Button
+		&.inverted{
+			@extend .#{$textcolor-slug}-white;
+		}
+		&.inverted:hover{
+			@extend .#{$textcolor-slug}-white;
+			@extend .#{$fill-slug}-blue-#{$i};
+		}
+
+		// 3. Deactivated Button
+		&.deactivated{
+			@extend .#{$textcolor-slug}-white-#{$i};
+		}
+		&.deactivated:hover{
+			@extend .#{$textcolor-slug}-white-#{$i};
+			background-color: transparent;
+		}
+
+		// 4. Negative Button
+		&.negative{
+			color: $red;
+		}
+		&.negative:hover{
+			@extend .#{$fill-slug}-red-#{$i};
+			@extend .#{$textcolor-slug}-white;
+		}
+
+		// 5. Success Button
+		&.success{
+			color: $green;
+		}
+		&.success:hover{
+			@extend .#{$fill-slug}-green-#{$i};
+			@extend .#{$textcolor-slug}-white;		
+		}
+
+		// 6. Warning Button
+		&.warning{
+			@extend .#{$textcolor-slug}-amber;
+		}
+		&.warning:hover{
+			@extend .#{$fill-slug}-amber-#{$i};
+			@extend .#{$textcolor-slug}-white;
+		}
+
 
 // II. Secondary Buttons
+
 	&.secondary{
 		@include border-all(1px,1px,1px,1px,solid);
 		@extend .border-blue;
 
-		// II.A Variations
-		&:hover{
-			@extend .#{$fill-slug}-blue-#{$i};
-			@extend .#{$border-slug}-blue-#{$i};
-		}
-		&.inverted{
-			border-color: $white;
-		}
-		&.inverted:hover{
-			@extend .#{$fill-slug}-blue-#{$i};
-			@extend .#{$border-slug}-blue-#{$i};
-		}
-		&.deactivated{
-			@extend .#{$textcolor-slug}-white-#{$i};
-			@extend .#{$border-slug}-white-#{$i};
-		}
-		&.deactivated:hover{
-			@extend .#{$textcolor-slug}-white-#{$i};
-			@extend .#{$border-slug}-white-#{$i};
-			background-color: transparent;
-		}
-		&.negative{
-			color: $red;
-			@extend .border-red;
-		}
-		&.negative:hover{
-			color: $white;
-			@extend .#{$fill-slug}-red-#{$i};
-			@extend .#{$border-slug}-red-#{$i};
-		}
+		// A. Variations
+			// 1. Basic Hover State
+			&:hover{
+				@extend .#{$fill-slug}-blue-#{$i};
+				@extend .#{$border-slug}-blue-#{$i};
+			}
+
+			// 2. Inverted Buttons
+			&.inverted{
+				border-color: $white;
+			}
+			&.inverted:hover{
+				@extend .#{$fill-slug}-blue-#{$i};
+				@extend .#{$border-slug}-blue-#{$i};
+			}
+
+			// 3. Deactivate Buttons
+			&.deactivated{
+				@extend .#{$textcolor-slug}-white-#{$i};
+				@extend .#{$border-slug}-white-#{$i};
+			}
+			&.deactivated:hover{
+				@extend .#{$textcolor-slug}-white-#{$i};
+				@extend .#{$border-slug}-white-#{$i};
+				background-color: transparent;
+			}
+
+			// 4. Negative Buttons
+			&.negative{
+				@extend .#{$textcolor-slug}-red-#{$i};
+				@extend .#{$border-slug}-red-#{$i};
+			}
+			&.negative:hover{
+				@extend .#{$textcolor-slug}-white;
+				@extend .#{$fill-slug}-red-#{$i};
+			}
+
+			// 5. Success Buttons
+			&.success{
+				@extend .#{$textcolor-slug}-green;
+				@extend .#{$border-slug}-green-#{$i};
+			}
+			&.success:hover{
+				@extend .#{$textcolor-slug}-white;
+				@extend .#{$border-slug}-green-#{$i};
+				@extend .#{$fill-slug}-green-#{$i};
+			}
+
+			// 6. Warning buttons
+			&.warning{
+				@extend .#{$textcolor-slug}-amber;
+				@extend .#{$border-slug}-amber-#{$i};
+			}
+			&.warning:hover{
+				@extend .#{$textcolor-slug}-white;
+				@extend .#{$border-slug}-amber-#{$i};
+			}
 	}
 
 //III. Primary Buttons
+
 	&.primary{
 		@extend .fill-blue;
-		color: $white;
-		&:hover{
-			@extend .#{$fill-slug}-blue-#{$i};
-		}
-		&.inverted{
-			@extend .fill-white;
-			color: $kblue;
-		}
-		&.inverted:hover{
-			@extend .#{$fill-slug}-blue-#{$i};
-			color: $white;
-		}
-		&.deactivated{
-			@extend .#{$fill-slug}-white-#{$i};
-		}
+		@extend .#{$textcolor-slug}-white;
+		// A. Variations
+			// 1. Hover
+			&:hover{
+				@extend .#{$fill-slug}-blue-#{$i};
+			}
 
-		&.deactivated:hover{
-			@extend .#{$fill-slug}-white-#{$i};
-		}
-		&.negative{
-			@extend .fill-red;
-		}
-		&.negative:hover{
-			@extend .#{$fill-slug}-red-#{$i};
-		}
+			// 2. Inverted
+			&.inverted{
+				@extend .#{$fill-slug}-white;
+				color: $kblue;
+			}
+			&.inverted:hover{
+				@extend .#{$fill-slug}-blue-#{$i};
+				@extend .#{$textcolor-slug}-white;
+			}
+
+			// 3. Deactivated
+			&.deactivated{
+				@extend .#{$textcolor-slug}-white;
+				@extend .#{$fill-slug}-white-#{$i};
+			}
+			&.deactivated:hover{
+				@extend .#{$textcolor-slug}-white;
+				@extend .#{$fill-slug}-white-#{$i};
+			}
+
+			// 4. Negative Buttons
+			&.negative{
+				@extend .#{$fill-slug}-red;
+				@extend .#{$textcolor-slug}-white;
+			}
+			&.negative:hover{
+				@extend .#{$fill-slug}-red-#{$i};
+			}
+
+			// 5. Success Buttons
+			&.success{
+				@extend .#{$textcolor-slug}-white;
+				@extend .#{$fill-slug}-green;
+			}
+			&.success:hover{
+				@extend .#{$textcolor-slug}-white;
+				@extend .#{$border-slug}-green-#{$i};
+				@extend .#{$fill-slug}-green-#{$i};
+			}
+
+			// 6. Warning Buttons
+			&.warning{
+				@extend .#{$textcolor-slug}-white;
+				@extend .#{$fill-slug}-amber;
+			}
+			&.warning:hover{
+				@extend .#{$textcolor-slug}-white;
+				@extend .#{$border-slug}-amber-#{$i};
+				@extend .#{$fill-slug}-amber-#{$i};
+			}
+
 	}
 }
+
+.fullwidth-button{
+	display: block;
+}
+
 

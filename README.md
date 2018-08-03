@@ -17,7 +17,7 @@ git --version
 ```
 #### Installing NodeJs and NPM
 
-You can download the macOS Installer directly from the [nodejs.org]<https://nodejs.org/en/> which will include npm.
+You can download the macOS Installer directly from the [nodejs.org](https://nodejs.org/en/) which will include npm.
 
 You can also install it through homebrew via terminal
 ```
@@ -61,6 +61,11 @@ gulp
 ```
 
 This should open a browser with a live view of the design system pages.
+
+## Other Resources
+### A Sketch Library
+A Sketch library has been created to help with designing full pages and for designers who are more comfortable working with Sketch than with code. You can request access to the Kalibrr Design System Sketch Library by creating a Sketch Cloud account and requesting it from the link below
+[Kalibrr Design System Sketch Library](https://sketch.cloud/s/pQPEJ)
 
 ## Troubleshooting
 If you're having trouble feel free to email the kalibrr design team at design@kalibrr.com

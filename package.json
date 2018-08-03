@@ -14,7 +14,9 @@
     "gulp-sass": "^4.0.1",
     "modularscale-sass": "^3.0.5"
   },
-  "dependencies": {},
+  "dependencies": {
+    "global": "^4.3.2"
+  },
   "repository": {
     "type": "git",
     "url": "git@git-ssh.kalibrr.com:kalibrr/design-system.git"

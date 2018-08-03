@@ -65,7 +65,7 @@ This should open a browser with a live view of the design system pages.
 ## Troubleshooting
 If you're having trouble feel free to email the kalibrr design team at design@kalibrr.com
 
-### Kalibrr Design Team
+## Kalibrr Design Team
 * Mark Lester Coscolluela Lacsamana
 * Alex Hans Collado
 * Ferdenee Joi Mempin

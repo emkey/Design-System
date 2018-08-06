@@ -71,6 +71,26 @@ A Sketch library has been created to help with designing full pages and for desi
 ## Troubleshooting
 If you're having trouble feel free to email the kalibrr design team at design@kalibrr.com
 
+
+### Authentication Problems
+If you're having trouble and getting authentication problems in terminal, make sure you've done one of the following.
+
+#### If you're trying to clone through ssh 
+If you are git cloning from this url
+```
+git@git-ssh.kalibrr.com:kalibrr/design-system.git
+```
+Make sure that you've generated an SSH key and added it to your profile. You can add an SSH key in [this page](https://git.kalibrr.com/profile/keys) as well as follow instructions in a tutorial mentioned there.
+
+#### If you're trying to clone through an http/https
+If you are git cloning from this url
+```
+https://git.kalibrr.com/kalibrr/design-system.git
+```
+Make sure you've set access token through [this page](https://git.kalibrr.com/profile/personal_access_tokens)
+
+Instead of entering your git password, use the access token name as your git password.
+
 ## Kalibrr Design Team
 * Mark Lester Coscolluela Lacsamana
 * Alex Hans Collado

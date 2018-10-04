@@ -83,7 +83,7 @@ II. Borders
 .fill-black, .button.primary.neutral {
   background-color: #1C1F21; }
 
-.fill-white, .button.primary.inverted, .card {
+.fill-white, .button.primary.inverted {
   background-color: #fff; }
 
 /* B. Secondary Colors */
@@ -327,6 +327,33 @@ II. Borders
   border-width: 1px 1px 1px 1px;
   border-style: solid; }
 
+.box-shadow1 {
+  box-shadow: 0px 3px 3px rgba(28, 31, 33, 0.1); }
+
+.box-shadow2 {
+  box-shadow: 0px 3px 3px rgba(28, 31, 33, 0.2); }
+
+.box-shadow3 {
+  box-shadow: 0px 3px 3px rgba(28, 31, 33, 0.3); }
+
+.box-shadow4 {
+  box-shadow: 0px 3px 6px rgba(28, 31, 33, 0.1); }
+
+.box-shadow5 {
+  box-shadow: 0px 3px 6px rgba(28, 31, 33, 0.2); }
+
+.box-shadow6 {
+  box-shadow: 0px 3px 6px rgba(28, 31, 33, 0.3); }
+
+.box-shadow7 {
+  box-shadow: 0px 3px 9px rgba(28, 31, 33, 0.1); }
+
+.box-shadow8 {
+  box-shadow: 0px 3px 9px rgba(28, 31, 33, 0.2); }
+
+.box-shadow9 {
+  box-shadow: 0px 3px 9px rgba(28, 31, 33, 0.3); }
+
 /* This is the Breakpoints Mixins */
 html {
   box-sizing: border-box; }
@@ -512,6 +539,49 @@ html {
   .column-12 {
     width: calc(100% * 12/12 - (1rem * 2 )); } }
 
+.css-grid-container {
+  display: grid;
+  grid-template-rows: 100px; }
+  @media (min-width: 0px) {
+    .css-grid-container {
+      grid-template-columns: 0.25rem auto 0.25rem; } }
+  @media (min-width: 600px) {
+    .css-grid-container {
+      grid-template-columns: 0.5rem auto 0.5rem; } }
+  @media (min-width: 1025px) {
+    .css-grid-container {
+      grid-template-columns: 1rem auto 1rem; } }
+
+/*
+.css-grid-container{
+	display: grid;
+	grid-template-columns: 
+	unquote("
+	[full-start]
+	minmax($small-gutter-width, 1fr) 
+	[main-start]
+	minmax(0, 1008px) 
+	[main-end]
+	minmax($small-gutter-width, 1fr);
+	[full-end]");
+}
+*/
+.css-grid {
+  display: grid;
+  grid-column-start: 2;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
+  grid-template-rows: 100px;
+  grid-gap: 0.5rem; }
+  @media (min-width: 0px) {
+    .css-grid {
+      grid-gap: 0.5rem; } }
+  @media (min-width: 600px) {
+    .css-grid {
+      grid-gap: 1rem; } }
+  @media (min-width: 1025px) {
+    .css-grid {
+      grid-gap: 2rem; } }
+
 body {
   font-family: "Fira Sans";
   font-size: 0.875em;
@@ -631,6 +701,7 @@ II. Secondary Buttons
   display: block; }
 
 .card {
+  background-color: #fff;
   border-radius: 0.25rem;
   border: 1px solid #e6e6e6;
   padding: 1rem;

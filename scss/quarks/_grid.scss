@@ -81,5 +81,46 @@ $column-slug: column;
 		}
 	}
 }
-
-
+.css-grid-container{
+	display: grid;
+	@include respond-to(small){
+		grid-template-columns: $small-gutter-width auto $small-gutter-width;
+	}
+	@include respond-to(medium){
+		grid-template-columns: $medium-gutter-width auto $medium-gutter-width;
+	}
+	@include respond-to(large){
+		grid-template-columns: $large-gutter-width auto $large-gutter-width;
+	}
+	grid-template-rows: 100px;
+}
+/*
+.css-grid-container{
+	display: grid;
+	grid-template-columns: 
+	unquote("
+	[full-start]
+	minmax($small-gutter-width, 1fr) 
+	[main-start]
+	minmax(0, 1008px) 
+	[main-end]
+	minmax($small-gutter-width, 1fr);
+	[full-end]");
+}
+*/
+.css-grid{
+	display: grid;
+	grid-column-start: 2;
+	grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
+	grid-template-rows: 100px;
+	grid-gap: ($small-gutter-width * 2);
+	@include respond-to(small){
+		grid-gap: $small-gutter-width * 2;
+	}
+	@include respond-to(medium){
+		grid-gap: $medium-gutter-width * 2;
+	}
+	@include respond-to(large){
+		grid-gap: $large-gutter-width * 2;
+	}
+}

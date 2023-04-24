@@ -9,8 +9,8 @@
   "author": "'Mark Lester C. Lacsamana', 'Alex Collado', 'Ferdenee Mempin'",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.23.6",
-    "gulp": "^3.9.1",
+    "browser-sync": "^2.29.1",
+    "gulp": "^4.0.2",
     "gulp-sass": "^4.0.1",
     "modularscale-sass": "^3.0.5"
   },
